@@ -13,7 +13,10 @@
         android:theme="@style/Theme.Layouts"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".PracticaLayouts2"
+            android:exported="false" />
+        <activity
+            android:name=".PracticaLayouts"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

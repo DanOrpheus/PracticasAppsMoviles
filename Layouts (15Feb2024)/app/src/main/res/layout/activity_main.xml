@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".PracticaLayouts">
 
     <TextView
         android:id="@+id/tv_fbCenter"
@@ -43,6 +43,7 @@
             android:layout_marginRight="5dp">
 
             <TextView
+                android:id="@+id/tv_nombre"
                 android:layout_height="22dp"
                 android:layout_width="wrap_content"
                 android:text="Nombre:"
@@ -51,6 +52,7 @@
                 android:textColor="#000000"/>
 
             <EditText
+                android:id="@+id/et_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -68,6 +70,7 @@
             android:layout_marginLeft="5dp">
 
             <TextView
+                android:id="@+id/tv_apellido"
                 android:layout_height="22dp"
                 android:layout_width="wrap_content"
                 android:text="Apellido:"
@@ -76,6 +79,7 @@
                 android:textColor="#000000"/>
 
             <EditText
+                android:id="@+id/et_apellido"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -97,6 +101,7 @@
         android:layout_marginBottom="5dp">
 
         <TextView
+            android:id="@+id/tv_email"
             android:layout_height="22dp"
             android:layout_width="wrap_content"
             android:text="Correo:"
@@ -105,12 +110,14 @@
             android:textColor="#000000"/>
 
         <EditText
+            android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="#898F9C"
             android:textColor="#000000"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:inputType="textEmailAddress"/>
 
     </LinearLayout>
 
@@ -124,6 +131,7 @@
         android:layout_marginBottom="5dp">
 
         <TextView
+            android:id="@+id/tv_password"
             android:layout_height="22dp"
             android:layout_width="wrap_content"
             android:text="Contraseña:"
@@ -132,6 +140,7 @@
             android:textColor="#000000"/>
 
         <EditText
+            android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -148,10 +157,10 @@
         android:orientation="vertical"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp">
+        android:layout_marginRight="10dp">
 
         <TextView
+            android:id="@+id/tv_phone"
             android:layout_height="22dp"
             android:layout_width="wrap_content"
             android:text="Teléfono:"
@@ -160,13 +169,36 @@
             android:textColor="#000000"/>
 
         <EditText
+            android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="#898F9C"
             android:textColor="#000000"
-            android:textSize="16sp"/>
+            android:textSize="16sp"
+            android:inputType="phone"/>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Registrar Cuenta" />
+
+    </LinearLayout>
+
 
 </LinearLayout>
