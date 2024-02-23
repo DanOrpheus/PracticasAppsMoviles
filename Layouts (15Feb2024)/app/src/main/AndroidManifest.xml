@@ -16,12 +16,11 @@
             android:name=".PracticaLayouts2"
             android:exported="true">
             <!--Poner Intent filter aqui y cambiar exported a True si quieres abrir el otro view-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 
@@ -29,6 +28,8 @@
             android:name=".PracticaLayouts"
             android:exported="false">
             <!--Poner Intent filter aqui y cambiar exported a True si quieres abrir el otro view-->
+
+
 
 
         </activity>

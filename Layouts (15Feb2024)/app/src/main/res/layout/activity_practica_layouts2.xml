@@ -184,9 +184,12 @@
             android:id="@+id/genre_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Action"
             android:layout_alignParentTop="true"
-            android:layout_margin="1dp"/>
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="Action" />
 
         <Button
             android:id="@+id/genre_drama"
@@ -216,9 +219,12 @@
             android:id="@+id/genre_japanese"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Japanese"
             android:layout_below="@id/genre_action"
-            android:layout_margin="1dp"/>
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="Japanese" />
 
     </RelativeLayout>
 
