@@ -30,11 +30,44 @@
         android:text="Agregar"
         android:layout_marginHorizontal="20dp"/>
 
+    <LinearLayout
+        android:id="@+id/listaDeTareas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_descTarea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="item name 1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingVertical="5dp"/>
+
+        <Button
+            android:id="@+id/bt_tarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/edit"/>
+
+    </LinearLayout>
+
+
     <ListView
         android:id="@+id/lv_tareas"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1" />
 
 </LinearLayout>
