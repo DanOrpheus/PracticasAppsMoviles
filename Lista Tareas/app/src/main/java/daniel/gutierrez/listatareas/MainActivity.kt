@@ -31,11 +31,13 @@ class MainActivity : AppCompatActivity() {
         //list_tareas.add("prueba")
         //list_tareas.add("prueba2")
 
-        val db = Room.databaseBuilder(
+        db = Room.databaseBuilder(
             applicationContext,
             AppDatabase::class.java, "tareas-db"
-        ).build()
+        ).allowMainThreadQueries().build()
 
+        //la funcion Cargar tareas va despues de crear la DB y antes del Adapter
+        cargarTareas()
 
         adapter=ArrayAdapter(this, android.R.layout.simple_list_item_1, list_tareas)
         lv_tareas.adapter = adapter
@@ -58,6 +60,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         lv_tareas.onItemClickListener = AdapterView.OnItemClickListener{parent, view, position,id ->
+
+            //Elimina de la BD por descripcion
+            var tarea_desc = list_tareas[position]
+            var tarea = db.tareaDao().getTareaByDesc(tarea_desc)
+            db.tareaDao().eliminarTarea(tarea)
+
             list_tareas.removeAt(position)
             adapter.notifyDataSetChanged()
         }
